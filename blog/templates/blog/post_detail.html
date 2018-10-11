@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% block title%}{{post.title}}{% endblock %}
+{% block description%}{{post.description}}{% endblock %}
+{% block keywords%}{{post.keywords}}{% endblock %}
+{% block header %}{% endblock %}
+{% block page%}
+{{get_base_menu}}
+
+<div class="post">
+        <h1>{{ post.title }}</h1>
+        <div class="d-flex flex-row bd-highlight mb-3">
+              <div class="p-2 bd-highlight"><img src="../../../../media/{{post.author.photo }}" width="49" height="49" alt="{{post.username}}" class="rounded"></div>
+                <div class="p-2 bd-highlight align-self-center">Автор: {{post.author}}.</div>
+                <div class="p-2 bd-highlight align-self-center">
+                    {% if post.published_date %}
+                    <div class="date">
+                        Опубликовано: {{ post.published_date }}.
+
+                    </div>
+                    {% endif %}
+                </div>
+        </div>
+        <p align="justify">{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
+{% block footer%} {% endblock %}
