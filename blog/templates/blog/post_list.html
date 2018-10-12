@@ -2,6 +2,16 @@
 {% block title%}Русский инветор{% endblock %}
 {% block description%}Блог о Российском фондовом рынке{% endblock %}
 {% block header %}{% endblock %}
+ {% block mainpage%}
+   {% if user.is_authenticated %}
+
+
+        {% else %}
+        <a class="text-muted" href="{% url 'login'%}?next={{request.path}}">Здравствуйте, читатель!</a> <a style="margin: 10px 10px 10px 10px;" class="btn btn-outline-success" href="{% url 'login'%}?next={{request.path}}">Войти</a>
+        {% endif %}
+
+
+{% endblock %}
 {% block page%}
 
 {{get_base_menu}}
@@ -11,5 +21,11 @@
                 <p><a class="btn btn-light" href="{{post.get_absolute_url}}">Читать полностью</a></p>
         <hr>
     {% endfor %}
+
+
+
+
+
+
 {% endblock %}
 {% block footer%} {% endblock %}

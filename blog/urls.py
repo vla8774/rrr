@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import include, url
 
 from . import views
 
@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^subject/(?P<url>.+)/$', views.subject_detail, name='subject_detail'),
     url(r'^post/$', views.blog_post_all, name='blog_post_all'),
     url(r'^(?P<post>[-\w]+)/$', views.post_detail, name='post_detail'),
+    url(r'^comments/', include('django_comments_xtd.urls')),
 ]
