@@ -158,3 +158,10 @@ COMMENTS_XTD_FROM_EMAIL = "noreply@example.com"
 COMMENTS_XTD_CONTACT_EMAIL = "helpdesk@example.com"
 COMMENTS_XTD_MAX_THREAD_LEVEL = 1  # default is 0
 COMMENTS_XTD_LIST_ORDER = ('-thread_id', 'order')  # default is ('thread_id', 'order')
+COMMENTS_XTD_APP_MODEL_OPTIONS = {
+    'blog.post': {
+        'allow_flagging': True,
+        'allow_feedback': False,
+        'show_feedback': False,
+    }
+}
