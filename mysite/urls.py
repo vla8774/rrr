@@ -19,7 +19,13 @@ from django.conf.urls.static import static
 from django.urls import include
 from django.conf import settings
 
-
+# djangojs
+# 
+# ./manage.py makemessages -d django -l ru - генерация локали ru для шаблонов
+# ./manage.py makemessages -d djangojs -l ru - генерация локали ru для js
+# 
+# ./manage.py compilemessages
+# 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'', include('blog.urls')),
