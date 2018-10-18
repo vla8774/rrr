@@ -1,10 +1,23 @@
+
+# Django
+from django.contrib.auth.views import LoginView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views import generic
+from bootstrap_modal_forms.mixins import PassRequestMixin, LoginAjaxMixin
+# Project
+from .forms import CustomUserCreationForm, CustomAuthenticationForm
 
-from .forms import CustomUserCreationForm
 
-
-class SignUp(generic.CreateView):
+class SignUp(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
     form_class = CustomUserCreationForm
-    success_url = reverse_lazy('login')
     template_name = 'account/signup.html'
+    success_message = 'Success: Sign up succeeded. You can now Log in.'
+    success_url = reverse_lazy('login')
+
+
+class CustomLoginView(LoginAjaxMixin, SuccessMessageMixin, LoginView):
+    authentication_form = CustomAuthenticationForm
+    template_name = 'account/login.html'
+    success_message = 'Success: You were successfully logged in.'
+    success_url = reverse_lazy('post_list')

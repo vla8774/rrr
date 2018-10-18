@@ -2,5 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/aidsbank" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/django-bootstrap-modal-forms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/rrr" vcs="Git" />
   </component>
 </project>
