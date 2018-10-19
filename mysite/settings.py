@@ -42,10 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites', #для комментариев
     'bootstrap_modal_forms',
-<<<<<<< HEAD
     'widget_tweaks',
-=======
->>>>>>> 140d16638259d6faea57a2334bd2d992bd24bf3c
     'django_comments_xtd',
     'django_comments',
     'blog',
@@ -139,15 +136,12 @@ AUTH_USER_MODEL = 'account.User'
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
+
 STATIC_DIRS = 'static'
 
-STATICFILES_DIRS = [
-    STATIC_DIRS,
-=======
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
->>>>>>> 140d16638259d6faea57a2334bd2d992bd24bf3c
 ]
 
 LOGIN_REDIRECT_URL = reverse_lazy('post_list')
