@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^post/$', views.blog_post_all, name='blog_post_all'),
     url(r'^(?P<post>[-\w]+)/$', views.post_detail, name='post_detail'),
     url(r'^comments/', include('django_comments_xtd.urls')),
+
 ]

@@ -41,3 +41,4 @@ def blog_post_all(request):
     get_base_menu(data)
     data['posts'] = Post.objects.all()
     return render(request, 'blog/blog_post_all.html', data)
+

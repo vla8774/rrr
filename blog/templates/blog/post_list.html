@@ -32,15 +32,6 @@
 
 {% block extrascripts %}
 
-  <script type="text/javascript">
-    $(function () {
-      // Log in & Sign up buttons
-      $(".login-btn").modalForm({formURL: "{% url 'login' %}"});
-      $(".signup-btn").modalForm({formURL: "{% url 'signup' %}"});
 
-
-
-    });
-  </script>
 
 {% endblock extrascripts %}
