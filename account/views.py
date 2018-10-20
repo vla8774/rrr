@@ -24,7 +24,7 @@ class CustomLoginView(LoginAjaxMixin, SuccessMessageMixin, LoginView):
     authentication_form = CustomAuthenticationForm
     template_name = 'account/login.html'
     success_message = 'Success: You were successfully logged in.'
-    success_url = reverse_lazy('post_list')
+    #success_url = reverse_lazy('post_list')
 
 
 class Change(generic.CreateView):
